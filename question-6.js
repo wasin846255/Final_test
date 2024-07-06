@@ -2,6 +2,9 @@
 
 function filterInStockProducts(products) {
   // เริ่มเขียนโค้ดตรงนี้
+  const inStock= products.filter(product=>product.quantity>0);
+  const stock= inStock.map(product=>({name: product.name, quantity: product.quantity}));
+  return stock;
 }
 
 // ตัวอย่างการใช้งาน
